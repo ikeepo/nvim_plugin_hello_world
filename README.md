@@ -1,13 +1,10 @@
 # Intro
+This is a Hello World collection for nvim learning, especially the plugin.  
+Different plugins in different branches.  
+## Current There are Two 
+### scratch buffer  
 
-## search the docs
-
-```shell
-# in nvim
-:Telescope help_tags
-# the cmd want to know
-
-```
+### hello world
 
 # Refs
 
