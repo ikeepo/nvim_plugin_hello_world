@@ -1,14 +1,17 @@
 # Intro
+Practical learning lua and nvim plugin. 
+## why named scratch buffer
+- [EMACS](https://www.gnu.org/software/emacs/manual/html_node/emacs/Lisp-Interaction.html) contains a buffer named `*scratch*` after it starts up    
+it is provided for evaluating Emacs Lisp expressions interactively.  
+- `*scratch*`中两个`**`有什么特别语法意义么？
+EMACS的默认使用习惯，表示命名特殊缓冲区；  
 
-## search the docs
-
-```shell
-# in nvim
-:Telescope help_tags
-# the cmd want to know
-
-```
-
+- Lisp对于EMACS是类似Lua对于Nvim么？  
+是的  
+- buffer是什么意思  
+内存中正在编辑的内容；  
+- REPL 是什么意思，经常看到   
+Read Eval Print Loop,一种交互式的边长环境。
 # Refs
 
 - [nvim intro](https://github.com/ikeepo/to-be-a-programmer/blob/master/topics/nvim.md)
