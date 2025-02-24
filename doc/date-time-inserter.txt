@@ -1,0 +1,95 @@
+*date-time-inserter.txt*  Easily insert the current date and/or time into
+                        your Neovim buffer.
+*DateTimeInserter*
+
+License: MIT
+Author: Anton Van Assche <https://github.com/AntonVanAssche/>
+
+===============================================================================
+CONTENTS                                                  *DateTimeInserter-TOC*
+
+  1. Commands.............|date-time-inserter-commands|
+  2. Configuration........|date-time-inserter-configuration|
+  3. Mapping..............|date-time-inserter-mapping
+
+===============================================================================
+
+1. Commands                                            *DateTimeInserterCommands*
+
+InsertDate                                                         *:InsertDate*
+
+  Inserts the current date into the buffer.
+
+InsertTime                                                         *:InsertTime*
+
+  Inserts the current time into the buffer.
+
+InsertDateTime                                                 *:InsertDateTime*
+
+  Inserts the current date and time into the buffer.
+
+===============================================================================
+2. Configuration                                 *DateTimeInserterConfiguration*
+
+  This part of the documentation contains the configuration options for the
+  plugin. It can be configured by passing a table to the `setup` function.
+  Below is an example configuration with all available options.
+
+>
+  require("date-time-inserter").setup {
+    date_format = 'MMDDYYYY',
+    date_separator = '/',
+    date_time_separator = ' at ',
+    time_format = 12,
+    show_seconds = false,
+
+  }
+<
+
+  `date_format`:
+    Defines the date structure using `Y`, `M`, and `D` for year, month, and
+    day (e.g., `MMDDYYYY` → `12/31/2022`).
+
+  `time_format`:
+    Use `12` for 12-hour format and `24` for 24-hour time (e.g., `12` → `1:00 PM`)
+
+  `date_separator`:
+    Character separating date parts (e.g., `-` → `12-31-2022`).
+
+  `date_time_separator`:
+    String separating date and time (e.g., ` at ` → `12-31-2022 at 11:59 AM`).
+
+  `show_seconds`:
+    Set `true` to include seconds (e.g., `true` → `11:59:41 AM`).
+
+===============================================================================
+3. Mapping                                             *DateTimeInserterMapping*
+
+  This part of the documentation contains recommended mappings for the
+  commands. You can use them as they are or modify them to your liking.
+
+>
+  vim.keymap.set(
+    "n",
+    "<leader>dt",
+    "<cmd>InsertDate<CR>",
+    {noremap = true, silent = true}
+  )
+
+  vim.keymap.set(
+    "n",
+    "<leader>tt",
+    "<cmd>InsertTime<CR>",
+    {noremap = true, silent = true}
+  )
+
+  vim.keymap.set(
+    "n",
+    "<leader>dtt",
+    "<cmd>InsertDateTime<CR>",
+    {noremap = true, silent = true}
+  )
+<
+
+===============================================================================
+vim:tw=78:ts=2:sts=2:sw=2:ft=help:norl:
