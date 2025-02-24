@@ -1,10 +1,13 @@
 # Intro
 This is a Hello World collection for nvim learning, especially the plugin.  
 Different plugins in different branches.  
-## Current There are Two 
+## Current 
+As the order from easy to complicated.
 ### scratch buffer  
 
 ### hello world
+
+### date-time-inserter
 
 # Refs
 
